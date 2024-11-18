@@ -2,23 +2,23 @@
 
 
 <h2>Starter</h2>
-go run - compile and run
-go build - compile
-go install - compile and move result to $gopath/bin
+go run - compile and run </br>
+go build - compile </br>
+go install - compile and move result to $gopath/bin </br>
 
 <h2>Packages</h2>
-Go programs are made up of packages
-First Statement must be the package
-Module is a collection of packages versioned together
-Always at least one package, maim, and the name is reserved for this purpose
-The main package must have a main function
+Go programs are made up of packages </br>
+First Statement must be the package </br>
+Module is a collection of packages versioned together </br>
+Always at least one package, maim, and the name is reserved for this purpose </br>
+The main package must have a main function </br>
 
 <h2>Importing/Exporting</h2>
-Only names starting with capital letter are exported
-Unexported names cannot be accessed outside of the package
-Import using import "package name"
-Alias with import [alias] "package name"
-Packages share scope across files, regardless of naming
+Only names starting with capital letter are exported </br>
+Unexported names cannot be accessed outside of the package </br>
+Import using import "package name" </br>
+Alias with import [alias] "package name" </br>
+Packages share scope across files, regardless of naming </br>
 
 
 Example project repo:
@@ -28,40 +28,40 @@ Variables
 https://go.dev/ref/spec#Variables
 
 <h2>Basic Types:</h2>
-bool
-string
-int - integer (positive)
-uint - positive or negative
-uintptr - unassigned int pointer
-All integers are 64 bits if possible. 
+bool </br>
+string </br>
+int - integer (positive) </br>
+uint - positive or negative </br>
+uintptr - unassigned int pointer </br>
+All integers are 64 bits if possible.  </br>
 
-int8, int16, int32, int64
-uint8, uint16, uint32, uint64
+int8, int16, int32, int64 </br>
+uint8, uint16, uint32, uint64 </br>
 
-byte - alias for uint8
-rune - alias for int32, represents a unicode point
-float32,float64 - IEEE-754 
-complex64,complex128
+byte - alias for uint8 </br>
+rune - alias for int32, represents a unicode point </br>
+float32,float64 - IEEE-754  </br>
+complex64,complex128 </br>
 
 <h2>Declaring Vars</h2>
-Valid names contain a-z, A-Z, 0-9 and _
-_ is special and for ignoring values
-Declare with keyword var
-Requires a type declaration var cat string
-Can leave off type if declaring with initial value var cat = "mittens"
-Short assignment syntax := means we can leave off var - cat := "mittens"
-All values must have a type
-Variables are MixedCase or camelCase //public/private case.
+Valid names contain a-z, A-Z, 0-9 and _ </br>
+_ is special and for ignoring values </br>
+Declare with keyword var </br>
+Requires a type declaration var cat string </br>
+Can leave off type if declaring with initial value var cat = "mittens" </br>
+Short assignment syntax := means we can leave off var - cat := "mittens" </br>
+All values must have a type </br>
+Variables are MixedCase or camelCase //public/private case. </br>
 
 <h2>Strings</h2>
-Double quotes "hello \n" - normal interpreted string literal, escape characters and interpreted
-Backticks `hello \n` - raw string literal, escape characters not interpreted
-Single quotes 'hello' - rune literal, this will error
-- Single quotes can only hold a single character - one rune's worth
-You probably want to use double quotes.
+Double quotes "hello \n" - normal interpreted string literal, escape characters and interpreted </br>
+Backticks `hello \n` - raw string literal, escape characters not interpreted </br>
+Single quotes 'hello' - rune literal, this will error </br>
+- Single quotes can only hold a single character - one rune's worth </br>
+You probably want to use double quotes. </br>
 
 <h2>Printing </h2>
-fmt package has a lot of lovely ways of pringting that support formatting similar to C's printf
+fmt package has a lot of lovely ways of pringting that support formatting similar to C's printf </br>
 
 ```
 fmt.Prinf("%T", someValue) //%T will print the value
@@ -69,15 +69,15 @@ fmt.Println("hello") //simple print to stdout ends with new line.
 ```
 
 <h2>Zero Values</h2>
-There is no undefined value in Go. Instead we have a "zero value"
-Boolean: False
-Numeric: 0
-String: ""
-Everything Else: Nil
+There is no undefined value in Go. Instead we have a "zero value" </br>
+Boolean: False </br>
+Numeric: 0 </br>
+String: "" </br>
+Everything Else: Nil </br>
 
 <h2>Functions:</h2>
-Declared with func keyword
-Must declare type of parameters and return values:
+Declared with func keyword </br>
+Must declare type of parameters and return values: </br>
 
 ```
 func add(x int, y int) int {
@@ -109,26 +109,26 @@ if x := 10 * y; x < 8 {
 
 <h2>Math ops:</h2>
 
-add + 
-subract - 
-multiply *
-divide /
-modulo %
-increment ++ 
-decrement -- 
+add `+`  </br>
+subract `-`  </br>
+multiply `*` </br>
+divide `/` </br>
+modulo `%` </br>
+increment `++`  </br>
+decrement `--`  </br>
 
 Bitwise:
-XOR ^
-OR |
-AND &
-shift left << 
-shift right >>
+XOR `^`
+OR `|`
+AND `&`
+shift left `<<` 
+shift right `>>`
 
 <h2>Logical Ops:</h2>
-not !
-or ||
-and && 
-comparisons !, ==, <, >, >=, <=
+not `!`
+or `||`
+and `&&` 
+comparisons `!, ==, <, >, >=, <=`
 
 <h2>Swich statements</h2>
 Essentially a chained if else

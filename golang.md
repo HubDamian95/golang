@@ -62,8 +62,10 @@ You probably want to use double quotes.
 
 <h2>Printing </h2>
 fmt package has a lot of lovely ways of pringting that support formatting similar to C's printf
+```
 fmt.Prinf("%T", someValue) //%T will print the value
-fmt.Println("hello") simple print to stdout ends with new line.
+fmt.Println("hello") //simple print to stdout ends with new line.
+```
 
 <h2>Zero Values</h2>
 There is no undefined value in Go. Instead we have a "zero value"
@@ -87,6 +89,7 @@ func add(x,y int) (int, int, int) {
     return x + y, y + y, x + x
 }
 ```
+
 You can return multiple values.
 
 Conditionals
@@ -155,6 +158,8 @@ switch {
 
 <h2>Loops:</h2>
 Only one loop syntax, the for loop
+
+```
 for [init]; [condition]; [post iteration] {
     //
 } 
@@ -162,14 +167,16 @@ for [init]; [condition]; [post iteration] {
 for i := 0; i < 10; i++ {
     fmt.Println(i)
 }
+```
 
 The initialization statement and the post iteration statement are optional, Thus Go has a while loop it's just spelled "for"
-
+```
 i := 0
 for i < 10 {
     fmt.Println(i)
     i++;
 }
+```
 
 
 Infinite loop for {...}
@@ -184,8 +191,10 @@ for {
 ```
 
 <h2>Slice and Arrays</h2>
+```
 var [size][type] name
 var arr = [6] int{2, 3, 5, 7, 11, 13}
+```
 
 The size is part of the type; it cannot be resized later
 Because of this, they are not very common

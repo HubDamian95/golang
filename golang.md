@@ -62,6 +62,7 @@ You probably want to use double quotes.
 
 <h2>Printing </h2>
 fmt package has a lot of lovely ways of pringting that support formatting similar to C's printf
+
 ```
 fmt.Prinf("%T", someValue) //%T will print the value
 fmt.Println("hello") //simple print to stdout ends with new line.
@@ -77,6 +78,7 @@ Everything Else: Nil
 <h2>Functions:</h2>
 Declared with func keyword
 Must declare type of parameters and return values:
+
 ```
 func add(x int, y int) int {
     return x + y
@@ -131,6 +133,7 @@ comparisons !, ==, <, >, >=, <=
 <h2>Swich statements</h2>
 Essentially a chained if else
 stops upojn first successful case
+
 ```
 switch [val] {
     case "go":
@@ -191,6 +194,7 @@ for {
 ```
 
 <h2>Slice and Arrays</h2>
+
 ```
 var [size][type] name
 var arr = [6] int{2, 3, 5, 7, 11, 13}
@@ -201,6 +205,7 @@ Because of this, they are not very common
 Can loop and index
 
 <h2>Slices</h2>
+
 ```
 var [] [type] name
 var slc = []int{2, 3, 5, 7, 11, 13}
@@ -225,6 +230,7 @@ var slc = []int {2, 3, 5, 7, 11, 13}
 
 <h2>make Keyword</h2>
 There is another way, using the make keyword
+
 ```
 mySlice := make([]int, 5)
 ```
@@ -235,6 +241,7 @@ mySlice := make([]int, 5)
 
 <h2>Slice Rules</h2>
 Can declare on an existing array
+
 ```
  primes := [6]int{2,3,5,7,11,13}
  var s []int = primes[1:4]
@@ -258,6 +265,7 @@ for index, value := range someSlice {
 
 <h2>Slice Appending</h2>
 - Add to a slice with the built in function append
+
 ```
  append(someSlice, value)
 ```
@@ -277,12 +285,15 @@ for index, value := range someSlice {
 - Write a program that prints out each letter of a string
 
 <h2>Encodings Quiz</h2>
+
+```
 s := "Senor"
 fmt.Println(len(s))
 fmt.Println(s[2])
 fmt.Printf("%x ", s[2]) //hex
 fmt.Printf("%c ", s[2]) //character
 fmt.Printf(string(s[2]))
+```
 
 <h2>Encodings:</h2>
 - Strings are just byte slices

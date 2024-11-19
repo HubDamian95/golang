@@ -212,7 +212,7 @@ The bigger the interface, the weaker the abstraction
 Consider a rectangle here: 
 - Width: Size of interface - price to inderstand it
 - Heigh: Value gained from the abstraction - what you get to do once you understant it
-
+```
 ---------------
 |             |
 |             |
@@ -220,9 +220,11 @@ Consider a rectangle here:
 |             |
 |             |
 ---------------
+```
 
 Best Case: 
 - Small and easy to understand, provides little value
+```
 _____
 |   |
 |   |
@@ -231,11 +233,14 @@ _____
 |   |
 |   |
 |___|
+```
 
 - Worst case - Large and hard to understand, provides little value
+```
 _______________________________
 |                             |
 |_____________________________|
+```
 
 - you might come from a language with lots of getters and setters
 - go usually does not use getters and setters - you access values directly 

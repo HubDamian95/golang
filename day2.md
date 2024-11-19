@@ -1,6 +1,7 @@
 <h1>Golang 19/11/2024</h1>
 
 <h2>Pointers</h2>
+
 - A Pointer holds the memory address of a value
 - Pointers show up two main ways, in types and for pointer operations
   - as a type var myPointer *int

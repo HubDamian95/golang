@@ -76,7 +76,41 @@ type Writer interface {
 
 <h3> io.Copy </h3>
 
-- Let’s look at Copy in the io package
-- Let’s look at Stdout from the os package
+- Let’s look at Copy in the io package - https://pkg.go.dev/io#Copy
+- Let’s look at Stdout from the os package - https://pkg.go.dev/os#pkg-variables
 - Let’s try to make our own writer to print our HTTP response
 
+<h3> JSON </h3>
+
+- If were using HTTP on the back end, chances are we care about JSON
+- Let’s take a look at the encoding/JSON docs
+- Marshal and Unmarshal for encoding and decoding
+- Specify json field names with struct field tags
+- Must be `tagName: "tagValue"` in backticks, one line
+
+<h3> Marshal/Unmarshal vs Encode/decode </h3>
+
+Related and sometimes used interchangeably
+- Encoding - converting to binary, operates on streams of bytes
+- Decoding - converting from binary to string, operates on streams of bytes
+- Marshal - Map some other types (like JSON) to Go types
+- Unmarshal - Map Go types to some other types (like JSON)
+- Marshaling — change the in memory representation of data to a different format
+
+<h2> Warmup </h2>
+
+<h3> Warmup </h3>
+Let’s take a look at the Pokemon API
+pokedex/kanto is the API we’ll use
+
+```
+type Response struct {
+    Name string `json:"name"`
+        Pokemon []Pokemon `json:"pokemon_entries"`
+}
+```
+
+<h2> Coming up </h2>
+
+- Wordle lab exercise (continued)
+- Intro to Concurrency

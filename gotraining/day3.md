@@ -15,6 +15,35 @@ Open the docs for the fmt package and find the Stringer interface
 - One of the most common interfaces
 - Anything that can describe itself as a string
 
+
+```
+package main
+
+import (
+	"fmt"
+)
+
+// Animal has a Name and an Age to represent an animal.
+type Animal struct {
+	Name string
+	Age  uint
+}
+
+// String makes Animal satisfy the Stringer interface.
+func (a Animal) String() string {
+	return fmt.Sprintf("%v (%d)", a.Name, a.Age)
+}
+
+func main() {
+	a := Animal{
+		Name: "Gopher",
+		Age:  2,
+	}
+	fmt.Println(a)
+}
+
+```
+
 ```
 func (d dog) String() string {
     return fmt.Sprintf("Name: %v,  Age: (%d)", d.name, d.age)
@@ -82,7 +111,7 @@ type Writer interface {
 
 <h3> JSON </h3>
 
-- If were using HTTP on the back end, chances are we care about JSON
+- If were using HTTP on the back end, chances are we care about JSON - https://pkg.go.dev/encoding/json
 - Let’s take a look at the encoding/JSON docs
 - Marshal and Unmarshal for encoding and decoding
 - Specify json field names with struct field tags

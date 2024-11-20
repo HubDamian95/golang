@@ -2,25 +2,10 @@ package wordle
 
 import (
 	"fmt"
-	"slices"
+	"strings"
 
 	"github.com/Hubdamian95/wordle/words"
 )
-
-func main() {
-	secret := words.GetWord()
-
-	attempts := 6
-	for attempts > 0 {
-		guess := userGuess
-		if !validateGuess(guess) {
-			fmt.Printf("Invalid guess.")
-		}
-		// guesses (5 letters - each letter - one of 26 english characters and in one of the three states - Absent, Present, correct)
-	}
-	attempts--
-	fmt.Printf("%d attempts left")
-}
 
 func userGuess() string {
 	var guess string
@@ -35,8 +20,8 @@ func validateGuess(g string) bool {
 		return false
 	}
 	alphabet := "abcdefghijklmnopqrstuvwxyz"
-	for _,v in range g {
-		if !slices.Contains(alphabet, g) {
+	for _, v := range g { //
+		if !strings.Contains(alphabet, string(v)) {
 			fmt.Println("The guess must only contain the 26 characters in the English alpahbet")
 			return false
 		}
@@ -45,9 +30,32 @@ func validateGuess(g string) bool {
 		fmt.Println("Not a valid word")
 		return false
 	}
-	
+
 	return true
 	// Func - check user input is only 5 char long
 	// No numbers allowed
+
+}
+
+func main() {
+	secret := words.GetWord()
+	secret = strings.ToLower(secret)
+
+	attempts := 6
+	for attempts > 0 {
+		guess := userGuess()
+		if !validateGuess(guess) {
+			fmt.Printf("Invalid guess.")
+			continue
+		}
+		if guess == secret {
+			fmt.Printf("The secret has been found")
+			return
+		}
+
+		attempts--
+		fmt.Printf("%d attempts left", attempts)
+		// guesses (5 letters - each letter - one of 26 english characters and in one of the three states - Absent, Present, correct)
+	}
 
 }
